@@ -2059,6 +2059,17 @@ register_conv_template(
     )
 )
 
+register_conv_template(
+    Conversation(
+        name="youri",
+        system_template="設定: {system_message}",
+        roles=("ユーザー", "システム"),
+        sep_style=SeparatorStyle.ADD_COLON_SPACE_SINGLE,
+        sep="\n",
+        stop_str="ユーザー:",
+    )
+)
+
 
 if __name__ == "__main__":
     from fastchat.conversation import get_conv_template
